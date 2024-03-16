@@ -1,0 +1,40 @@
+What is the version of Docker Server Engine running on the Host?
+> docker -v
+How many containers are running on this host?
+> docker ps
+How many images are available on this host?
+> docker images
+> docker images | tail -n +2 | wc -l
+Run a container using the redis image
+> docker run -d redis
+Stop the container you just created
+> docker ps
+> docker stop <container_id>
+How many containers are RUNNING on this host now?
+> docker ps
+#### Creating some containers####
+
+How many containers are RUNNING on this host now?
+> docker ps
+How many containers are PRESENT on the host now?
+> docker ps -a
+Which image is used to run nginx-1 container
+> docker inspect --format='{{.Config.Image}}' nginx-1
+What is the name of the container created using the ubuntu image?
+> docker ps 
+What is the ID of the container that uses the alpine image and is not running?
+> docker ps
+What is the state of the stopped alpine container?
+EXITED
+Delete all containers from the Docker Host.
+> docker rm $( docker ps -aq )   => Using command substitution in bash
+Delete the ubuntu Image.
+> docker rmi ubuntu
+Pull the docker image nginx:1.14-alpine
+> docker pull nginx:1.14-alpine
+Run a container with the nginx:1.14-alpine image and name it webapp
+> docker run -d --name webapp nginx:1.14-alpine
+Cleanup: Delete all images on the host
+> docker stop $( docker ps -q)
+> docker rm $( docker ps -aq )
+> docker rmi $( docker images -q )
