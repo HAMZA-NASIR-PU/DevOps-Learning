@@ -1,0 +1,57 @@
+How many images are available on this host?
+> docker images | tail -n +2 | wc -l 
+What is the size of the ubuntu image?
+#### PULLING A NEW IMAGE ####
+We just pulled a new image. What is the tag on the newly pulled NGINX image?
+What is the tag of the newly pulled image of nginx?
+
+We just downloaded the code of an application. What is the base image used in the Dockerfile?
+
+Inspect the Dockerfile in the webapp-color directory.
+> ls
+> cd webapp-color
+> cat Dockerfile
+
+To what location within the container is the application code copied to during a Docker build?
+
+Inspect the Dockerfile in the webapp-color directory.
+
+When a container is created using the image built with this Dockerfile, what is the command used to RUN the application inside it.
+
+Inspect the Dockerfile in the webapp-color directory.
+
+What port is the web application run within the container?
+
+Inspect the Dockerfile in the webapp-color directory.
+
+Build a docker image using the Dockerfile and name it webapp-color. No tag to be specified.
+> docker build . -t webapp-color
+
+Run an instance of the image webapp-color and publish port 8080 on the container to 8282 on the host.
+> docker run -d -p 8282:8080 webapp-color
+
+Access the application by clicking on the tab named HOST:8282 above your terminal.
+
+After you are done, you may stop the running container by hitting CTRL + C if you wish to.
+
+What is the base Operating System used by the python:3.6 image?
+
+If required, run an instance of the image to figure it out.
+
+> docker run --name my-container python:3.6 cat /etc/*release*
+
+What is the approximate size of the webapp-color image?
+
+That's really BIG for a Docker Image. Docker images are supposed to be small and light weight. Let us try to trim it down.
+
+Build a new smaller docker image by modifying the same Dockerfile and name it webapp-color and tag it lite.
+
+
+Hint: Find a smaller base image for python:3.6. Make sure the final image is less than 150MB.
+
+> cat Dockerfile
+> vi Dockerfile
+> docker build . -t webapp-color:lite
+
+Run an instance of the new image webapp-color:lite and publish port 8080 on the container to 8383 on the host.
+> docker run -d -p 8383:8080 webapp-color:lite

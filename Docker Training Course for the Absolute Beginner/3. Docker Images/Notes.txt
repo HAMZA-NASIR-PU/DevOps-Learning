@@ -1,0 +1,7 @@
+=> Layered Architecture	
+=> Docker build output
+
+> docker build .
+> docker build -t my-simple-web-app
+> docker build . -t my-account-name/my-simple-web-app
+> docker push my-account-name/my-simple-web-app
