@@ -1,0 +1,33 @@
+docker run centos
+docker run -it centos bash
+	# cat /etc/*release*
+docker ps
+docker run -d centos sleep 20
+docker ps
+docker ps
+docker ps -a
+docker run -d centos sleep 2000
+docker stop <container_id or container_name>
+docker ps
+docker ps -a
+docker rm <container_id or container_name>
+docker rm <list of container ids> => Remove multiple containers at once
+docker images
+docker rmi busybox
+docker rmi ubuntu
+docker run centos
+docker ps -a
+docker rmi centos (!First remove container)
+docker rm <container_name>
+docker rmi centos
+docker ps
+docker images
+docker ps -a
+docker pull ubuntu
+docker images
+docker run -d ubuntu sleep 100
+docker ps
+docker exec <container_name> cat /etc/*release*
+
+
+
