@@ -1,0 +1,25 @@
+> docker ps
+> docker run ubuntu cat /etc/*release*
+> docker run ubuntu:17.10 cat /etc/*release*
+> docker run ubuntu sleep 15
+> docker run -d ubuntu sleep 1500
+> docker stop <container_id>
+> docker ps
+> docker attach <container_id>
+> docker run timer
+> docker run -d timer
+> docker attach <container_id>
+> docker run -d -p  jenkins/jenkins
+To find internal ip of container
+> docker inspect <container_id>
+> docker run -p 8080:8080 jenkins/jenkins
+> mkdir my-jenkins-data
+> docker run -p 8080:8080 -v /root/my-jenkins-data:var/jenkins_home -u root jenkins/jenkins
+> 
+
+
+
+
+
+
+
