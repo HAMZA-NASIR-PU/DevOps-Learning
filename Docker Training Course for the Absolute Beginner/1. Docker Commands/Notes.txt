@@ -1,0 +1,35 @@
+run - start a container
+> docker run ngin
+
+ps - list containers
+> docker ps
+> docker ps -a => Both stopped and running containers
+
+stop - stop a container
+> docker stop <container_id or container_name>
+
+rm - remove a container
+> docker rm <container_id or container_name>
+
+images - list images
+> docker images
+
+rmi - remove images  
+> docker rmi <image_name>  (! Delete all dependent containers to remove image)
+
+pull - download an image
+
+==> Unlike VM, containers are not meant to host OS. It primarily purpose is to run a task and when that task completed, container will be stopped.
+
+append a command
+> docker run ubuntu sleep 5
+
+exec - execute a command on a running container.
+
+> docker exec <container_name> cat /etc/hosts
+
+run - attach and detach
+> docker run -d kodekloud/simple-webapp  => Running in detached mode.
+
+To attach back to the container
+> docker attach <container_name or container_id>
