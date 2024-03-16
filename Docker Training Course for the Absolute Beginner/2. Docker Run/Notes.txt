@@ -1,0 +1,30 @@
+> docker run redis:4.0  => 4.0 is the tag
+by default is the latest tag
+> docker run redis  
+
+RUN - STDIN
+./app.sh
+
+> docker run kodekloud/simple-prompt-docker  (By default the docker container does not listen to the standard input)
+> docker run -i kodekloud/simple-prompt-docker => i means interactive
+> docker run -it kodekloud/simple-prompt-docker => Attach with the terminal of container
+
+run - PORT mapping
+
+> docker run kodekloud/webapp 172.17.0.2 is the internal ip of a docker container.
+> docker run -p 80:5000 kodekloud/webapp  => 80 - PORT of Docker Host, 5000 -  PORT of Docker Container
+> docker run -p 3306:3306 mysql
+> docker run -p 3307:3306 mysql
+
+run - Volume Mapping
+> docker run mysql => Container has own isolated file system 
+>docker stop mysql
+>docker rm mysql
+
+> docker run -v /opt/datadir:/var/lib/mysql mysql => /opt/datadir - Host directory
+
+inspect container
+> docker inspect <container_name>
+
+container logs
+> docker logs <container_name>
