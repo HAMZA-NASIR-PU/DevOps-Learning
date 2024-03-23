@@ -1,0 +1,2 @@
+> docker run -d -p 38282:8080 -e APP_COLOR=blue --name blue-app kodekloud/simple-webapp
+> docker run -d -e MYSQL_ROOT_PASSWORD=db_pass123 --name mysql-db mysql
