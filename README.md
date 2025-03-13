@@ -24,7 +24,7 @@ AWS Roles help keep AWS environments **secure and flexible** by granting tempora
 
 - Best article => https://awsfundamentals.com/blog/aws-iam-roles-terms-concepts-and-examples
 
-## ** Why Does AWS Lambda Automatically Create a Role?**  
+## **Why Does AWS Lambda Automatically Create a Role?**  
 
 When you create an AWS **Lambda function**, AWS automatically creates an **IAM Role** for the function if you don't specify one. This happens because Lambda needs **permissions** to interact with other AWS services on your behalf.  
 
