@@ -21,3 +21,5 @@ Similarly, AWS **roles** provide temporary permissions to users, applications, o
 
 ### **Conclusion**  
 AWS Roles help keep AWS environments **secure and flexible** by granting temporary permissions only when needed. Instead of using permanent passwords or keys, services and users can "borrow" permissions using roles. 🚀
+
+- Best article => https://awsfundamentals.com/blog/aws-iam-roles-terms-concepts-and-examples
