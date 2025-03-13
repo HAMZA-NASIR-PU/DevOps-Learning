@@ -23,3 +23,34 @@ Similarly, AWS **roles** provide temporary permissions to users, applications, o
 AWS Roles help keep AWS environments **secure and flexible** by granting temporary permissions only when needed. Instead of using permanent passwords or keys, services and users can "borrow" permissions using roles. 🚀
 
 - Best article => https://awsfundamentals.com/blog/aws-iam-roles-terms-concepts-and-examples
+
+## ** Why Does AWS Lambda Automatically Create a Role?**  
+
+When you create an AWS **Lambda function**, AWS automatically creates an **IAM Role** for the function if you don't specify one. This happens because Lambda needs **permissions** to interact with other AWS services on your behalf.  
+
+### **Why Is This Necessary?**  
+A Lambda function often needs to:  
+✅ **Write logs to Amazon CloudWatch** 📜 (for debugging and monitoring).  
+✅ **Access S3, DynamoDB, or other AWS services** 🛠 (if your function interacts with them).  
+✅ **Use other AWS resources** (like SNS, SQS, or Secrets Manager).  
+
+Instead of requiring you to manually set up permissions, AWS creates a **default execution role** for Lambda.  
+
+### **What Does the Default Role Contain?**  
+- It typically includes **basic permissions**, such as:  
+  - `AWSLambdaBasicExecutionRole`: Allows Lambda to write logs to CloudWatch.  
+  - More permissions can be added if your function needs access to other AWS services.  
+
+### **Where Can You Find or Modify This Role?**  
+You can check and update the Lambda role by:  
+1. Going to **AWS IAM Console** → **Roles**.  
+2. Looking for a role named **"AWSLambdaServiceRole-<FunctionName>"**.  
+3. Editing its **permissions** if your function needs more access.  
+
+### **Can You Use a Custom Role?**  
+Yes! When creating a Lambda function, you can:  
+- **Choose an existing IAM role** that already has the required permissions.  
+- **Manually create a custom role** and attach it to your function.  
+
+### **Conclusion**  
+AWS **automatically** creates a role to make Lambda functional out of the box, ensuring it can log events and interact with AWS securely. If your function needs extra permissions, you must **modify or replace** the role accordingly. 🚀
