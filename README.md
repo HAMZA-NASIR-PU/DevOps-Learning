@@ -54,3 +54,24 @@ Yes! When creating a Lambda function, you can:
 
 ### **Conclusion**  
 AWS **automatically** creates a role to make Lambda functional out of the box, ensuring it can log events and interact with AWS securely. If your function needs extra permissions, you must **modify or replace** the role accordingly. 🚀
+
+## **Calling a Simple Lambda Function using AWS CLI**
+
+```javascript
+console.log('Loading function');
+
+export const handler = async (event, context) => {
+    //console.log('Received event:', JSON.stringify(event, null, 2));
+    console.log('value1 =', event.key1);
+    console.log('value2 =', event.key2);
+    console.log('value3 =', event.key3);
+    return {key1: event.key1, key2: event.key2, key3: event.key3};  // Echo back the first key value
+    // throw new Error('Something went wrong');
+};
+```
+
+AWS CLI command is:
+`aws lambda invoke / 
+--function-name test-function / 
+--cli-binary-format raw-in-base64-out / 
+--payload '{"key1": "a", "key2": "b", "key3": "c"}' response.json`
