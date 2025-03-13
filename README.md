@@ -75,3 +75,5 @@ AWS CLI command is:
 --function-name test-function / 
 --cli-binary-format raw-in-base64-out / 
 --payload '{"key1": "a", "key2": "b", "key3": "c"}' response.json`
+
+Developers Guide of AWS Lambda => https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
