@@ -77,3 +77,7 @@ AWS CLI command is:
 --payload '{"key1": "a", "key2": "b", "key3": "c"}' response.json`
 
 Developers Guide of AWS Lambda => https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+
+## Understanding the Different Ways to Invoke Lambda Functions
+
+https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/
