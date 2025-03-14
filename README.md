@@ -83,3 +83,7 @@ Developers Guide of AWS Lambda => https://docs.aws.amazon.com/lambda/latest/dg/w
 https://aws.amazon.com/blogs/architecture/understanding-the-different-ways-to-invoke-lambda-functions/
 
 ## AWS Lambda Function URLs: Built-in HTTP endpoints
+
+https://docs.aws.amazon.com/whitepapers/latest/microservices-on-aws/microservices-on-serverless-technologies.html
+
+https://docs.aws.amazon.com/pdfs/whitepapers/latest/microservices-on-aws/microservices-on-aws.pdf
